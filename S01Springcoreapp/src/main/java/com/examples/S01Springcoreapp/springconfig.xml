@@ -79,5 +79,13 @@
 			<ref bean="address8" />
 		</property>
 	</bean>
+	
+	
+	<bean name="item1" p:id="1" p:name="Laptop" p:price="120000.0" p:quantity="1" class="com.examples.S01Springcoreapp.Item"></bean>
+	<bean name="sc1" class="com.examples.S01Springcoreapp.ShoppingCart">
+		<property name="item">
+			<ref bean="item1"/>
+		</property>
+	</bean>
 
 </beans>
