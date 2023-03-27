@@ -87,5 +87,9 @@
 			<ref bean="item1"/>
 		</property>
 	</bean>
+	
+	<bean name="emp1" class="com.examples.S01Springcoreapp.Employee">
+		<constructor-arg></constructor-arg>
+	</bean>
 
 </beans>
