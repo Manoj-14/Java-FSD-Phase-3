@@ -6,7 +6,15 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 	public static void main(String[] args) {
 
-		demo3();
+		demo4();
+
+	}
+
+	private static void demo4() {
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"com/examples/S01Springcoreapp/springconfig3.xml");
+		EmployeeDAO dao = (EmployeeDAO) context.getBean("empdao");
+		System.out.println(dao);
 
 	}
 
