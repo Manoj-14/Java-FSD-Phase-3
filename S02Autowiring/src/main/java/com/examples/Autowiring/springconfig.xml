@@ -19,6 +19,8 @@
 
 	<bean name="emp1" class="com.examples.Autowiring.Employee"
 		p:id="08" p:name="Manoj" />
+	<bean name="emp2" class="com.examples.Autowiring.Employee"
+		p:id="07" p:name="Manohar" />
 
 
 
