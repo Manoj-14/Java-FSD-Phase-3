@@ -12,6 +12,7 @@ public class Employee {
 	int id;
 	String name;
 	@Autowired
+	@Qualifier("address2")
 	private Address address;
 
 	public int getId() {

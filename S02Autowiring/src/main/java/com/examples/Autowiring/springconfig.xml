@@ -11,7 +11,8 @@
 
 	<context:annotation-config />
 
-
+	<bean name="address2" class="com.examples.Autowiring.Address"
+		p:city="Banglore" p:pincode="570002" />
 
 	<bean name="address1" class="com.examples.Autowiring.Address"
 		p:city="Mysore" p:pincode="570002" />
