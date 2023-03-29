@@ -4,19 +4,15 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class PlainSimplelogic implements InitializingBean {
-
-	@Autowired
-	private Simplelogic simplelogic;
-
-	public PlainSimplelogic(Simplelogic simplelogic) {
-
+@Component
+public class Simplelogic implements InitializingBean {
+	public Simplelogic() {
 		System.out.println("Class was create");
-		this.simplelogic = simplelogic;
 	}
 
+	@PostConstruct
 	public void init() {
 		System.out.println("Class Was initailized");
 	}
@@ -26,12 +22,14 @@ public class PlainSimplelogic implements InitializingBean {
 		System.out.println("Class was initalised in after property set");
 	}
 
+	@PreDestroy
 	public void destroyed() {
 		System.out.println("Bean is about to destroyed");
 	}
 
 	public void doSomething() {
-		simplelogic.doSomething();
+		System.out.println("Work from Silmple Logic");
+		
 	}
 
 }
