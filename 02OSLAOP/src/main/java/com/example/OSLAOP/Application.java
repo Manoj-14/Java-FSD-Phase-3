@@ -12,9 +12,9 @@ public class Application {
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(Application.class);
 		ConfigurableApplicationContext context = app.run(args);
-		
+
 		context.getBean(TracibleService.class).hello("aop");
-		
+
 	}
 
 }
