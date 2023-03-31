@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Setter Dependency injection -->
+
+	<bean name="emp1" class="com.examples.S01Springcoreapp.Employee">
+		<property name="id">
+			<value>01</value>
+		</property>
+		<property name="name">
+			<value>Tom</value>
+		</property>
+	</bean>
+
+	<bean name="emp2" class="com.examples.S01Springcoreapp.Employee">
+		<property name="id" value="02"></property>
+		<property name="name" value="Jerry"></property>
+	</bean>
+
+	<bean name="emp3" class="com.examples.S01Springcoreapp.Employee"
+		p:id="03" p:name="Marry"></bean>
+
+	<bean name="emp4" class="com.examples.S01Springcoreapp.Employee"
+		p:id="04" p:name="Kevin">
+		<property name="departments">
+			<list>
+				<value>Management</value>
+				<value>HR</value>
+				<value>Technical</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="emp5" class="com.examples.S01Springcoreapp.Employee"
+		p:id="05" p:name="Kevin">
+		<property name="products">
+			<map>
+				<entry key="100" value="Laptops"></entry>
+				<entry key="200" value="Mobile"></entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean name="emp6" class="com.examples.S01Springcoreapp.Employee"
+		p:id="06" p:name="Kevin">
+		<property name="countriesLanguages">
+			<props>
+				<prop key="USA">English</prop>
+				<prop key="India">Kannada</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean name="emp7" class="com.examples.S01Springcoreapp.Employee"
+		p:id="07" p:name="Kevin">
+		<property name="holidays">
+			<set>
+				<value>2</value>
+				<value>31</value>
+				<value>15</value>
+			</set>
+		</property>
+	</bean>
+
+	<bean name="address8"
+		class="com.examples.S01Springcoreapp.Address" p:city="Mysore"
+		p:pincode="570002"></bean>
+
+	<bean name="emp8" class="com.examples.S01Springcoreapp.Employee"
+		p:id="08" p:name="Manoj">
+		<property name="address">
+			<ref bean="address8" />
+		</property>
+	</bean>
+	
+	
+	<bean name="item1" p:id="1" p:name="Laptop" p:price="120000.0" p:quantity="1" class="com.examples.S01Springcoreapp.Item"></bean>
+	<bean name="sc1" class="com.examples.S01Springcoreapp.ShoppingCart">
+		<property name="item">
+			<ref bean="item1"/>
+		</property>
+	</bean>
+	
+	<bean name="emp1" class="com.examples.S01Springcoreapp.Employee">
+		<constructor-arg></constructor-arg>
+	</bean>
+
+</beans>
