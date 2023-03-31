@@ -8,3 +8,5 @@ create table product (
 )
 
 Select * from product;
+
+delete from product;
