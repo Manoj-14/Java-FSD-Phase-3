@@ -1,4 +1,4 @@
-package com.example.S13SpringBootREST;
+package com.example.S13SpringBootRest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
